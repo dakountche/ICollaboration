@@ -1,0 +1,12 @@
+t,Race,Birth,Gender,ZIP,Problem
+t1,Black,1965,m,0214*,short breath
+t2,Black,1965,m,0214*,chest pain
+t3,Black,1965,f,0213*,hypertension
+t4,Black,1965,f,0213*,hypertension
+t5,Black,1964,f,0213*,obesity
+t6,Black,1964,f,0213*,chest pain
+t7,White,1964,m,0213*,chest pain
+t8,White,1964,m,0213*,obesity
+t9,White,1964,m,0213*,short breath
+t10,White,1967,m,0213*,chest pain
+t11,White,1967,m,0213*,chest pain

@@ -1,0 +1,22 @@
+version: '2'
+services:
+  anaconda:
+    build: ./anaconda
+    ports:
+    - "8888:8888"
+    volumes:
+    - ../../reviews/:/opt/reviews
+    command: /opt/conda/bin/jupyter notebook --notebook-dir=/opt/reviews --ip='*' --port=8888 --no-browser
+    links:
+    - rabbitmq
+    - mininet
+  rabbitmq:
+    build: ./rabbitmq
+    image: rabbitmq
+    ports:
+      - "15672:15672"
+  mininet:
+    build: ./mininet
+    image: mininet
+volumes:
+  logvolume01: {}
