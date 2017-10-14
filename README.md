@@ -31,7 +31,7 @@ Note that Mininet and RabbitMQ are optional.
 
 Also, these methods have been tested only on GNU/Linux.
 
-# Anantomy of a Scientific paper
+# Anatomy of a Scientific paper
 
 Many schemes (see [2]-[5]) have been proposed for how to oraganize a paper or how to read it (fast).
 Definitly, one needs a method to be able to keep up with the pace of publications.
@@ -138,6 +138,7 @@ Which shows the root tree:
  - install: folder containing installation methods
  - resources: images, etc.
  - reviews: containing the notebooks organised form the research field.
+ - index.ipynb
  - Template.ipynb: the Template used to create all the notebooks
  - README.md: this readme.
 
