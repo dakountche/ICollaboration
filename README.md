@@ -1,17 +1,24 @@
-Interactive Scientific Collaboration
-=====================================
+
+# Interactive Scientific Collaboration
 
 
 # Introduction
+
 This project was born after many scientific paper reviews.
-The idea is to share how one understands a paper
-and also to quickly test the method described in the paper at hand.
+
+The design goals are:
+ - to share how one understands a paper
+ - to quickly prototype the methods described in the paper at hand using for example Python or a programming language supported by Jupyter
+ - to test new hypothesis and write new papers
+ - to applying Machine Learning tools on the generated notebooks. 
+ - to contibute to research reproducibility as in [1].
+ 
 Naturaly, Jupyter was chosen to serve as the framework for scientific paper reviews.
 
 This document describes:
 
-- how to install the necessary tools for using Jupyter in this context. It also provides an installation procedure using Docker or Vagrant
-- Using the existing reviews
+- How to install the necessary tools for using Jupyter in this context. It also provides an installation procedure using Docker
+- How to use the existing notebooks
 
 The following  installation procedure are proposed:
 
@@ -19,14 +26,14 @@ The following  installation procedure are proposed:
 2.  pip and virtualenv
 3.  Docker
 
-The choice of the appropriate way depends on the specific needs.
-Note that Mininet and RabbitMQ are optional and was used for implementing
-experimentation related to Scoop@F.
+The choice of the appropriate installation method depends on the specific needs.
+Note that Mininet and RabbitMQ are optional.
 
 Also, these methods have been tested only on GNU/Linux.
 
 # Anantomy of a Scientific paper
-Many scheme have been proposed for how to oraganize a paper or how to read it (fast).
+
+Many schemes (see [2]-[5]) have been proposed for how to oraganize a paper or how to read it (fast).
 Definitly, one needs a method to be able to keep up with the pace of publications.
 
 In this project, the following organization is chosen for a paper:
@@ -35,6 +42,8 @@ In this project, the following organization is chosen for a paper:
  - the problem studied
  - the solution proposed
  - the experimentations
+ - observations of the reader
+ - a way of translating new English words in the language of the reader
 
 All the sections lead to the creation of a Jupyter notebook consider as a template.
 
@@ -48,7 +57,7 @@ See: https://docs.continuum.io/anaconda/install
 
 After the installation, type the following command:
 
-```
+```bash
 docker run -i -t -p 8888:8888 -v reviews:/opt/reviews  \
 icollaboration /bin/bash -c "/opt/conda/bin/conda install jupyter -y &&\
 /opt/conda/bin/conda create -n ipykernel_py2 python=2 ipykernel &&\
@@ -148,10 +157,28 @@ To create a new papers reviews:
 3. Save and mane the copy
 
 The newly created notebook can then be used to review the paper at hand.
-To reproduce the results on a given paper, we used Python programming language.
+Python programming language is used to try to reproduce the results on a given paper. 
 However, many languages can be used provided the kernel is supported in Jupyter.
 
 
 # Conclusion
-Jupyter is very flexible and easy to use. This approach for quick prototyping and exchange between researchers.
+This approach was designed for quick prototyping and exchange between researchers.
+It requires to take the time to carefully review important papers and share their essence. 
+
 Feel free to improve and share with us your work.
+
+
+# See also
+
+* [1] https://github.com/alegrand/RR_webinars
+* [2] https://www.sciencemag.org/careers/2016/01/how-read-scientific-paper
+* [3] https://www.sciencemag.org/careers/2016/03/how-seriously-read-scientific-paper
+* [4] https://www.elsevier.com/connect/infographic-how-to-read-a-scientific-paper
+* [5] http://www.research4life.org/training/part_a_how_to_read_a_scientific_paper_2014_06/
+
+
+
+
+```python
+
+```
